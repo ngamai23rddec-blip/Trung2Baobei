@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trung 2 BaoBei – Hán ngữ của tôi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fcf9f2;--card:#fff;--g1:#e8f3e4;--g2:#cfe4c8;--dk:#3f5e3c;--sb:#3f5e3c;--tx:#243425;--mu:#697c6c;--bad:#c0392b;--ok:#2e8b57;--blob:#a5ccb5;color-scheme:light}
+[data-t=dark]{--bg:#0f1a14;--card:#172a1f;--g1:#1d3326;--g2:#2f5a40;--dk:#8fd9a8;--sb:#1a2e22;--tx:#e6f1ea;--mu:#8fa597;--bad:#ff7b6b;--ok:#6fd49a;--blob:#2f5a40;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;display:flex;min-height:100vh;background:var(--bg);color:var(--tx);font:16px/1.5 "Nunito","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+h2,h3,.stat b,.brand b{font-family:"Baloo 2","Nunito","Noto Sans SC",sans-serif}h2{font-size:34px;line-height:1.2;margin:0 0 8px}h3{margin:0 0 12px;font-size:22px}
+aside{width:272px;flex:none;background:var(--sb);color:#fff;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:26px 14px 14px;gap:12px}
+.brand{display:flex;gap:12px;align-items:center;padding:0 8px}.logo{width:48px;height:48px;flex:none;border-radius:16px;background:#ffffff26;display:grid;place-items:center;font-size:24px}
+.brand b{font-size:26px;line-height:1}.brand span{display:block;font-size:13px;opacity:.8;line-height:1.3;margin-top:4px}
+#nav{display:flex;flex-direction:column;gap:4px;overflow:auto;flex:1;margin-top:12px}
+#nav button{display:flex;align-items:center;gap:14px;background:none;border:0;color:#fff;font:600 17px "Baloo 2",sans-serif;padding:11px 16px;border-radius:16px;text-align:left;box-shadow:none;white-space:nowrap}
+#nav button.on{background:#ffffff26}#nav button:hover{background:#ffffff1a;transform:none}#nav i{font-style:normal;width:24px}
+#sk{background:#ffffff1f;border-radius:20px;padding:14px 18px;display:flex;flex-direction:column}#sk b{font:700 19px "Baloo 2"}#sk span{font-size:14px;opacity:.85}
+.lnk{background:none!important;border:0!important;color:#fff!important;opacity:.7;font:600 14px "Nunito"!important;padding:2px 8px!important;text-align:left;box-shadow:none!important;border-radius:8px}.lnk:hover{opacity:1;transform:none!important}
+main{flex:1;min-width:0;max-width:1180px;margin:0 auto;padding:38px 44px}
+button,select,input{font:inherit;color:inherit}
+button{background:var(--card);border:2px solid var(--g1);border-radius:999px;padding:10px 20px;font:700 16px "Baloo 2","Nunito",sans-serif;cursor:pointer;box-shadow:0 4px 0 var(--g1);transition:.15s}
+button:hover{transform:translateY(-1px)}button:active{transform:translateY(2px);box-shadow:0 2px 0 var(--g1)}button:disabled{opacity:.5;cursor:not-allowed}
+button.p{background:var(--dk);color:var(--bg);border-color:var(--dk);box-shadow:0 4px 0 #0003}
+input,select{background:var(--card);border:2px solid var(--g2);border-radius:18px;padding:11px 16px;font-weight:600}
+.card{background:var(--card);border:2px solid var(--g1);border-radius:28px;padding:24px;box-shadow:0 5px 0 var(--g1);margin-bottom:22px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--g1),var(--card));border:2px solid var(--g1);border-radius:36px;padding:40px;box-shadow:0 8px 0 var(--g1);margin-bottom:26px}
+.hero:after{content:"";position:absolute;right:-50px;top:-70px;width:300px;height:300px;background:var(--blob);border-radius:60% 40% 55% 45%;z-index:0}.hero>*{position:relative;z-index:1}
+.hero h1{font:800 clamp(26px,3.3vw,42px)/1.2 "Baloo 2","Noto Sans SC",sans-serif;margin:0 0 12px;max-width:880px}.hero p{font-size:19px;margin:0 0 22px;max-width:640px}
+.pill{display:inline-flex;gap:8px;align-items:center;border:2px solid var(--g1);background:var(--card);border-radius:999px;padding:8px 18px;font:700 17px "Baloo 2";margin:0 10px 10px 0}
+.goal{display:flex;justify-content:space-between;margin-top:10px;font:600 17px "Baloo 2";color:var(--mu);cursor:pointer}
+.bar{height:14px;background:var(--g1);border-radius:99px;overflow:hidden;margin:6px 0 22px}.bar i{display:block;height:100%;background:#5b9a6e;border-radius:99px;transition:width .4s}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:22px}
+.stat{display:flex;gap:16px;align-items:center;background:var(--card);border:2px solid var(--g1);border-radius:26px;padding:20px;box-shadow:0 5px 0 var(--g1)}
+.stat i{font-style:normal;width:56px;height:56px;flex:none;border-radius:18px;background:var(--g1);display:grid;place-items:center;font-size:24px}.stat b{display:block;font-size:30px;line-height:1.1}.stat div{color:var(--mu);font-weight:700}
+.mu{color:var(--mu);font-size:15px}.big{font:700 84px/1.1 "Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;text-align:center;margin:10px 0}
+.q{font-size:26px;text-align:center;margin:12px 0}.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.opts button{padding:16px;border-radius:20px}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.g{color:var(--ok)}.r{color:var(--bad);text-decoration:underline}.blur{filter:blur(8px);cursor:pointer}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:8px;border-bottom:2px solid var(--g1);text-align:left}
+.bars{display:flex;gap:8px;align-items:flex-end;height:120px;margin-top:10px}.bars div{flex:1;background:var(--g2);border-radius:10px 10px 0 0;text-align:center;font-size:12px;min-height:4px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0}.tag{font-size:12px;background:var(--g1);border-radius:99px;padding:2px 10px}
+label{display:block;font:800 13px "Nunito";letter-spacing:.08em;text-transform:uppercase;color:var(--mu);margin:14px 0 6px}
+.row label{display:flex;gap:6px;align-items:center;letter-spacing:0;text-transform:none;font-size:15px;margin:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pick select{width:100%}.pick hr{border:0;border-top:2px dashed var(--g1);margin:20px 0}.wide{width:100%;font-size:19px;padding:14px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.flip{perspective:1400px;cursor:pointer;margin:16px 0 22px}
+.inner{position:relative;height:340px;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d}.inner.f{transform:rotateY(180deg)}
+.side{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border:2px solid var(--g2);border-radius:32px;box-shadow:0 8px 0 var(--g1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px}
+.back{transform:rotateY(180deg);background:var(--g1)}.vi{font-size:22px;font-weight:700}
+.gb{border-radius:22px;min-width:130px;display:flex;flex-direction:column;align-items:center;padding:10px 22px;color:#2b3a2d}.gb small{opacity:.6;font-weight:600;font-family:Nunito}
+.g0{background:#fde8e4;border-color:#f3b9b0;box-shadow:0 4px 0 #f3b9b0}.g1{background:#fff1d9;border-color:#f1d19a;box-shadow:0 4px 0 #f1d19a}.g2{background:#e3f1e0;border-color:#b4d9ab;box-shadow:0 4px 0 #b4d9ab}.g3{background:#d9edf6;border-color:#a8d3e8;box-shadow:0 4px 0 #a8d3e8}
+@media(max-width:820px){body{display:block}aside{width:auto;height:auto;position:sticky;top:0;z-index:5;padding:10px 12px;gap:6px}.brand span,#sk,.lnk{display:none}#nav{flex-direction:row;margin:0}#nav button{padding:8px 14px;font-size:15px}main{padding:20px 16px}.hero{padding:26px}.two,.opts{grid-template-columns:1fr}.big{font-size:60px}.inner{height:300px}}
+</style></head><body>
+<aside><div class="brand"><div class="logo">🌿</div><div><b>Trung 2 BaoBei</b><span>Học tiếng Trung, nhẹ nhàng mà chắc</span></div></div><nav id="nav"></nav><div id="sk"></div><button class="lnk" id="th" onclick="S.theme=S.theme=='dark'?'light':'dark';save();go(CUR)"></button><button class="lnk" onclick="rst()">Đặt lại tiến độ</button></aside><main id="m"></main>
+<script src="data.js"></script>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const today=()=>new Date().toLocaleDateString('sv'),dayN=()=>Math.floor(Date.now()/864e5),INT=[0,1,2,4,8,16],LB=l=>typeof l=='number'?'Bài '+l:l;
+let S;try{S=JSON.parse(localStorage.getItem('hv1'))}catch(e){}
+if(!S)S={words:(window.SEED_WORDS||[]).map(w=>({...w,src:'file',box:0,due:0,seen:0,right:0,wrong:0,fav:0,hard:0,err:{}})),log:{},sc:{},hist:[],theme:'light'};
+const save=()=>{try{localStorage.setItem('hv1',JSON.stringify(S))}catch(e){}};
+const L=()=>S.log[today()]||(S.log[today()]={sec:0,n:0,ok:0}),stt=w=>w.box>=4?'known':w.seen?'learning':'new',STN={new:'Chưa học',learning:'Đang học',known:'Đã thuộc'};
+setInterval(()=>{if(!document.hidden){L().sec+=5;save()}},5000);
+const pick=(a,n)=>a.slice().sort(()=>Math.random()-.5).slice(0,n),W=id=>S.words.find(w=>w.id==id);
+function rec(w,ok,type,mode){w.seen++;if(ok){w.right++;w.box=Math.min(5,w.box+1)}else{w.wrong++;w.box=0;if(type)w.err[type]=(w.err[type]||0)+1}
+ w.due=dayN()+(ok?INT[w.box]:0);L().n++;if(ok)L().ok++;if(mode){const c=S.sc[mode]||(S.sc[mode]={r:0,t:0});c.t++;if(ok)c.r++}save()}
+function say(id){const w=W(id);if(!w||!window.speechSynthesis)return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(w.hanzi.replace(/[()]/g,''));u.lang='zh-CN';u.rate=.85;
+ const vs=speechSynthesis.getVoices(),v=vs.find(v=>/^zh[-_]CN/i.test(v.lang))||vs.find(v=>/^zh/i.test(v.lang));if(v)u.voice=v;speechSynthesis.speak(u)}
+/* ---------- Pinyin checker ---------- */
+const V='aeiouüāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ',RE=new RegExp(`(?:zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])?[${V}]+(?:ng|n|r)?(?![${V}])`,'g');
+const TM={'\u0304':1,'\u0301':2,'\u030c':3,'\u0300':4},MK=['','\u0304','\u0301','\u030c','\u0300'],TN=['thanh nhẹ (không dấu)','thanh 1','thanh 2','thanh 3','thanh 4'];
+function mark(a,d){if(d>4)return a;const i=a.includes('a')?a.indexOf('a'):a.includes('e')?a.indexOf('e'):a.includes('ou')?a.indexOf('o'):Math.max(...[...'aeiouü'].map(v=>a.lastIndexOf(v)));return i<0?a:a.slice(0,i+1)+MK[d]+a.slice(i+1)}
+function syl(str){let s=str.toLowerCase().replace(/u:/g,'ü').replace(/v/g,'ü').replace(/[\s'’()\-·]/g,'');
+ s=s.replace(/([a-zü]+)([1-5])/g,(m,a,d)=>mark(a,+d)).normalize('NFC');const m=s.match(RE)||[];
+ return{ok:m.join('')===s,raw:str,list:m.map(x=>{let t=0;const b=x.normalize('NFD').replace(/[\u0300\u0301\u0304\u030c]/g,c=>{t=TM[c];return''}).normalize('NFC');return{raw:x,b,t}})}}
+const PR=[['zh','z'],['ch','c'],['sh','s'],['j','q'],['j','x'],['q','x'],['zh','j'],['ch','q'],['sh','x'],['n','l']],ini=b=>(b.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])/)||[''])[0];
+function conf(a,b){if(!a||!b)return'';const x=ini(a.b),y=ini(b.b);return x!=y&&PR.some(p=>p.includes(x)&&p.includes(y))?` (dễ nhầm ${x}/${y})`:''}
+function chk(ans,inp){const vs=[ans.replace(/\([^)]*\)/g,''),ans.replace(/[()]/g,'')],I=syl(inp);let first;
+ for(const v of vs){const r=cmp(syl(v),I);if(r.ok)return r;first=first||r}return first}
+function cmp(A,I){const key=x=>x.list.map(s=>s.b+s.t).join('|');
+ const hl=I.ok?I.list.map((s,i)=>{const a=A.list[i];return`<b class="${a&&a.b==s.b&&a.t==s.t?'g':'r'}">${esc(s.raw)}</b>`}).join(' '):esc(I.raw);
+ if(!I.list.length)return{ok:false,type:'pinyin',msg:'Bạn chưa nhập Pinyin.',hl};
+ if(key(A)==key(I))return{ok:true,msg:'Chính xác!',hl};
+ const ab=A.list.map(s=>s.b).join(''),ib=I.list.map(s=>s.b).join('');
+ if(ab==ib&&A.list.length==I.list.length){const bad=[];A.list.forEach((s,i)=>{if(s.t!=I.list[i].t)bad.push(`âm tiết ${i+1} "${s.b}": cần ${TN[s.t]}, bạn nhập ${TN[I.list[i].t]}`)});
+  const no=I.list.every(s=>!s.t)&&A.list.some(s=>s.t);return{ok:false,type:'tone',msg:(no?'Đúng các âm tiết nhưng thiếu dấu thanh — ':'Đúng âm tiết, sai thanh điệu — ')+bad.join('; '),hl}}
+ const bad=[];for(let i=0;i<Math.max(A.list.length,I.list.length);i++){const a=A.list[i],b=I.list[i];if(!a||!b||a.b!=b.b)bad.push(`âm tiết ${i+1}: cần "${a?a.raw:'—'}", bạn nhập "${b?b.raw:'—'}"${conf(a,b)}`)}
+ return{ok:false,type:'pinyin',msg:'Sai âm tiết — '+bad.join('; '),hl}}
+/* ---------- Navigation ---------- */
+const TABS=[['home','Trang chủ'],['vocab','Từ vựng của tôi'],['cards','Thẻ ghi nhớ'],['quiz','Luyện tập'],['mist','Ôn lại lỗi sai']],IC={home:'🏠',vocab:'📖',cards:'🗂️',quiz:'🎯',mist:'🔁'};
+let Q=null,F=null,V0={q:'',st:'',ls:'',sort:''},CUR='home';
+const day=i=>new Date(Date.now()-i*864e5).toLocaleDateString('sv'),streak=()=>{let s=0;for(let i=S.log[day(0)]?.n?0:1;S.log[day(i)]?.n>0;i++)s++;return s};
+function go(t){Q=null;F=null;CUR=t;document.documentElement.dataset.t=S.theme;
+ $('#nav').innerHTML=TABS.map(([k,n])=>`<button class="${k==t?'on':''}" onclick="go('${k}')"><i>${IC[k]}</i>${n}</button>`).join('');
+ const s=streak();$('#sk').innerHTML=`<b>Chuỗi ${s} ngày</b><span>${s?'Giữ vững nha 🌱':'Ôn vài từ để bắt đầu nha 🌱'}</span>`;
+ $('#th').textContent=S.theme=='dark'?'☀️ Giao diện sáng':'🌙 Giao diện tối';
+ ({home:dash,cards:cardsCfg,quiz:()=>qcfg('mix','Luyện tập'),vocab:vocab,mist:mist})[t]();scrollTo(0,0)}
+function rst(){if(!confirm('Đặt lại toàn bộ tiến độ học? (Danh sách từ vẫn giữ nguyên)'))return;S.words.forEach(w=>Object.assign(w,{box:0,due:0,seen:0,right:0,wrong:0,fav:0,last:undefined,err:{}}));S.log={};S.sc={};S.hist=[];save();go('home')}
+function setGoal(){const g=+prompt('Mục tiêu ôn mỗi ngày (số từ):',S.goal||30);if(g>0){S.goal=g;save();go('home')}}
+/* ---------- Dashboard ---------- */
+function dash(){const A=S.words,t=dayN(),seen=A.filter(w=>w.seen),known=A.filter(w=>w.box>=4),due=seen.filter(w=>w.due<=t),n=L().n,G=S.goal||30,s=streak(),
+ R=A.reduce((a,w)=>a+w.right,0),T=R+A.reduce((a,w)=>a+w.wrong,0),sc=m=>S.sc[m]?Math.round(S.sc[m].r*100/S.sc[m].t)+'%':'—',
+ days=[6,5,4,3,2,1,0].map(i=>[day(i).slice(5),S.log[day(i)]?.n||0]),mx=Math.max(1,...days.map(d=>d[1])),
+ wk=A.filter(w=>w.wrong>w.right).sort((a,b)=>(b.wrong-b.right)-(a.wrong-a.right)).slice(0,5),st=A.filter(w=>w.right>=3&&!w.wrong).slice(0,5),
+ li=a=>a.map(w=>`${esc(w.hanzi)} <span class=mu>${esc(w.pinyin)}</span>`).join('<br>')||'<span class=mu>Chưa có</span>',
+ sx=(v,l,i)=>`<div class=stat><i>${i}</i><div><b>${v}</b>${l}</div></div>`;
+ $('#m').innerHTML=`<div class=hero><h1>Cày từ vựng như cày phim bộ thì chắc giỏi tiếng Trung lâu rồi 🍿🌿</h1><p>😅 Học 5 phút thôi cũng được, hơn là ngồi đây đọc mấy câu mắng vui của tui nè 😜</p>
+ <div><span class=pill>📖 ${A.length} từ</span><span class=pill>⏰ ${due.length} từ cần ôn</span><span class=pill>🔥 ${s} ngày liên tiếp</span></div>
+ <div class=goal onclick=setGoal() title="Bấm để đổi mục tiêu"><span>Mục tiêu hôm nay</span><span>${n} / ${G} từ đã ôn</span></div><div class=bar><i style="width:${Math.min(100,n*100/G)}%"></i></div>
+ <div class=row><button class=p onclick="go('cards')">🗂️ Học thẻ ghi nhớ</button><button onclick="go('quiz')">🎯 Luyện tập</button><button onclick="go('mist')">🔁 Ôn lại lỗi sai</button><button onclick="go('vocab');$('#fi').click()">📥 Nhập từ mới</button></div></div>
+ <div class=grid>${sx(A.length-seen.length,'Chưa học','🌱')}${sx(seen.length-known.length,'Đang học','✏️')}${sx(known.length,'Đã thuộc','🏆')}${sx(T?Math.round(R*100/T)+'%':'—','Độ chính xác','🎯')}</div>
+ <div class=card><h3>Hoạt động 7 ngày <span class=mu>(số lượt ôn)</span></h3><div class=bars>${days.map(d=>`<div style="height:${d[1]*100/mx}%">${d[1]||''}<br><span class=mu>${d[0]}</span></div>`).join('')}</div></div>
+ <div class=grid><div class=card><h3>Điểm</h3>Pinyin: ${sc('py')}<br>Nghe: ${sc('listen')}<br>Viết: ${sc('write')}<br>Hanzi↔nghĩa: ${sc('hv-vi')} / ${sc('vi-hv')}<br>Hanzi→Pinyin (chọn): ${sc('hv-pyc')}<br>Pinyin→Hanzi (chọn): ${sc('pyc-hv')}</div><div class=card><h3>Từ yếu</h3>${li(wk)}</div><div class=card><h3>Từ mạnh</h3>${li(st)}</div></div>
+ <div class=card><h3>Lịch sử phiên</h3>${(S.hist||[]).slice(-6).reverse().map(h=>`<div class=mu>${h.d} · ${h.mode} · ${h.s}/${h.n}</div>`).join('')||'<div class=mu>Chưa có</div>'}</div>`}
+/* ---------- Flashcards ---------- */
+const lessons=()=>[...new Set(S.words.map(w=>w.lesson))],lsOpt=()=>`<option value="">Tất cả bài</option>`+lessons().map(l=>`<option value="${esc(l)}">${LB(l)}</option>`).join('');
+const byLs=l=>S.words.filter(w=>!l||String(w.lesson)==l);
+const FT=[['','Tất cả'],['new','Từ mới'],['seen','Đã học rồi'],['fav','Yêu thích'],['g0','Đã đánh dấu Lại nào'],['g1','Đã đánh dấu Khó nhằn'],['g2','Đã đánh dấu Ổn áp'],['g3','Đã đánh dấu Dễ ợt']],GR=['Lại nào','Khó nhằn','Ổn áp','Dễ ợt'],
+ KD=[['','Tất cả từ vựng'],['1','Chữ đơn (1 chữ Hán)'],['2','Từ ghép (2+ chữ)']],
+ fOk=(w,k)=>!k||(k=='new'?!w.seen:k=='seen'?w.seen>0:k=='fav'?w.fav:w.last===+k[1]),kOk=(w,k)=>!k||(k=='1')==([...w.hanzi.replace(/[()]/g,'')].length==1);
+const deck=()=>{const k=$('#kd').value,s=$('#st').value,l=$('#ls').value;return S.words.filter(w=>kOk(w,k)&&fOk(w,s)&&(!l||String(w.lesson)==l))};
+function upd(){$('#cnt').innerHTML=`Bộ thẻ hiện tại: <b>${deck().length} thẻ</b>`}
+function cardsCfg(){const cnt=k=>S.words.filter(w=>fOk(w,k)).length;
+ $('#m').innerHTML=`<h2>Thẻ ghi nhớ</h2><p class=mu>Lật thẻ, nhớ lại, và tự chấm điểm để ghi nhớ lâu hơn.</p><div class="card pick" style="max-width:860px;margin-top:22px"><h3>Chọn một bộ thẻ 🎴</h3>
+ <div class=two><div><label>Loại</label><select id=kd onchange=upd()>${KD.map(([v,n])=>`<option value="${v}">${n}</option>`).join('')}</select></div>
+ <div><label>Trạng thái / Điểm</label><select id=st onchange=upd()>${FT.map(([v,n])=>`<option value="${v}">${n} (${cnt(v)})</option>`).join('')}</select></div></div>
+ <label>Chủ đề</label><select id=ls onchange=upd()>${lsOpt().replace('Tất cả bài','Tất cả chủ đề')}</select>
+ <div class=row style="margin-top:16px"><label><input type=checkbox id=sh checked> Xáo trộn</label><label>Số thẻ <input id=n type=number min=0 placeholder="tất cả" style="width:100px;padding:6px 12px"></label></div>
+ <hr><p id=cnt style="font-size:18px"></p><button class="p wide" onclick=cardsGo()>▷ Bắt đầu</button></div>`;upd()}
+function cardsGo(){let p=deck();if(!p.length)return alert('Bộ thẻ này chưa có thẻ nào.');if($('#sh').checked)p=pick(p,p.length);const n=+$('#n').value;if(n>0)p=p.slice(0,n);F={q:p.map(w=>w.id),i:0,f:0,re:{},tot:p.length};card()}
+function card(){if(F.i>=F.q.length){$('#m').innerHTML=`<div class=card style="text-align:center;max-width:700px;margin:auto"><h2>Xong ${F.tot} thẻ 🎉</h2><p class=mu>Giỏi lắm, hôm nay thêm một bước nữa rồi nè.</p><div class=row style="justify-content:center"><button class=p onclick="go('cards')">Chọn bộ thẻ khác</button><button onclick="go('home')">Về trang chủ</button></div></div>`;return}
+ const w=W(F.q[F.i]);F.f=0;$('#m').innerHTML=`<div style="max-width:760px;margin:auto"><div class=top><button onclick="go('cards')">← Thoát</button><span class=mu>Thẻ ${F.i+1}/${F.q.length}</span></div><div class=bar style="margin-bottom:6px"><i style="width:${F.i*100/F.q.length}%"></i></div>
+ <div class=flip onclick=flip()><div class=inner id=fl><div class="side front"><div class=big>${esc(w.hanzi)}</div><span class=mu>Chạm hoặc nhấn Space để lật</span></div>
+ <div class="side back"><div class=big style="font-size:46px;margin:0">${esc(w.hanzi)}</div><div class=q style="margin:4px 0">${esc(w.pinyin)}</div><div class=vi>${esc(w.vi)}</div></div></div></div>
+ <div class=row style="justify-content:center"><button onclick="say(${w.id})">🔊 Nghe</button><button onclick="W(${w.id}).fav=!W(${w.id}).fav;save();this.textContent=W(${w.id}).fav?'♥ Đã yêu thích':'♡ Yêu thích'">${w.fav?'♥ Đã yêu thích':'♡ Yêu thích'}</button></div>
+ <div id=ctl class=row style="justify-content:center"><button class="p wide" onclick=flip()>Lật thẻ</button></div></div>`;say(w.id)}
+function flip(){if(!F||F.i>=F.q.length)return;F.f=!F.f;$('#fl').classList.toggle('f',!!F.f);if(F.f)$('#ctl').innerHTML=GR.map((g,i)=>`<button class="gb g${i}" onclick="gr(${i})"><b>${g}</b><small>${i+1}</small></button>`).join('')}
+function gr(g){const id=F.q[F.i],w=W(id);w.seen++;w.last=g;L().n++;if(g==0){w.box=0;w.due=dayN();if(!F.re[id]){F.re[id]=1;F.q.push(id)}}else if(g==1){w.box=Math.max(1,w.box);w.due=dayN()+1}else{w.box=Math.min(5,w.box+(g==3?2:1));w.due=dayN()+INT[w.box];L().ok++}save();F.i++;card()}
+/* ---------- Quiz engine (Pinyin / Quiz / Listening / Writing / Mistakes) ---------- */
+const MN={'hv-vi':'Hanzi → nghĩa','vi-hv':'Nghĩa → Hanzi','hv-pyc':'Hanzi → chọn Pinyin','pyc-hv':'Pinyin → chọn Hanzi',py:'Hanzi → nhập Pinyin',listen:'Nghe → chọn nghĩa',write:'Viết Hanzi',mix:'Tổng hợp'};
+
+/* ---------- Pinyin-lookalike distractors ---------- */
+const bs=p=>syl(p.replace(/\([^)]*\)/g,'')).list,bKey=p=>bs(p).map(x=>x.b).join(''),tKey=p=>bs(p).map(x=>x.b+x.t).join('|');
+function lev(a,b){const d=Array.from({length:a.length+1},(_,i)=>[i,...Array(b.length).fill(0)]);for(let j=1;j<=b.length;j++)d[0][j]=j;
+ for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]==b[j-1]?0:1));return d[a.length][b.length]}
+function toneVars(p){const str=p.toLowerCase().normalize('NFC'),ms=[...str.matchAll(RE)],out=[];
+ ms.forEach((m,mi)=>{const L=syl(m[0]).list[0];if(!L)return;for(let t=0;t<=4;t++){if(t==L.t)continue;const ns=mark(L.b,t).normalize('NFC');
+  out.push(str.slice(0,m.index)+ns+str.slice(m.index+m[0].length))}});return out}
+function simWords(w,n){const a=bKey(w.pinyin),ta=tKey(w.pinyin);
+ return S.words.filter(x=>x.id!=w.id&&tKey(x.pinyin)!=ta&&x.hanzi!=w.hanzi).map(x=>({x,d:lev(a,bKey(x.pinyin))*2+(bs(x.pinyin).length==bs(w.pinyin).length?0:1)+Math.random()*.9})).sort((p,q)=>p.d-q.d).slice(0,n).map(o=>o.x)}
+function pyOpts(w){const seen=new Set([tKey(w.pinyin)]),out=[],add=s=>{const k=tKey(s);if(k&&!seen.has(k)){seen.add(k);out.push(s);return 1}};
+ pick(toneVars(w.pinyin),2).forEach(add);simWords(w,8).forEach(x=>{if(out.length<3)add(x.pinyin)});pick(toneVars(w.pinyin),6).forEach(x=>{if(out.length<3)add(x)});
+ return pick([{t:w.pinyin,ok:1},...out.slice(0,3).map(t=>({t}))],4)}
+function hzOpts(w){const seen=new Set([w.hanzi]),out=[];simWords(w,10).forEach(x=>{if(out.length<3&&!seen.has(x.hanzi)){seen.add(x.hanzi);out.push(x.hanzi)}});
+ return pick([{t:w.hanzi,ok:1},...out.map(t=>({t}))],4)}
+function qcfg(mode,title){$('#m').innerHTML=`<h2>${title}</h2><div class=card><div class=row>Dạng ${mode=='mix'?`<select id=md>${['mix','hv-vi','vi-hv','hv-pyc','pyc-hv','py','listen','write'].map(k=>`<option value=${k}>${MN[k]}</option>`).join('')}</select>`:`<b>${MN[mode]}</b><input type=hidden id=md value=${mode}>`}
+ Bài <select id=ls>${lsOpt()}</select> Số câu <input id=n type=number min=1 placeholder="Tất cả" style="width:110px"></div><button class=p onclick="startQ($('#md').value,byLs($('#ls').value),+$('#n').value)">Bắt đầu</button></div>`}
+function startQ(mode,pool,n){if(!pool.length)return alert('Chưa có từ phù hợp.');const ws=pick(pool,n>0?Math.min(n,pool.length):pool.length);
+ Q={mode,i:0,ok:0,items:ws.map(w=>({w,m:mode=='mix'?pick(['hv-vi','vi-hv','hv-pyc','pyc-hv','py','listen','write'],1)[0]:mode})),wait:0,errs:[]};showQ()}
+function showQ(){if(Q.i>=Q.items.length)return endQ();const{w,m}=Q.items[Q.i];Q.wait=0;let b='',h=`<div class=mu>Câu ${Q.i+1}/${Q.items.length} · ${MN[m]}</div>`;
+ if(m=='hv-vi'||m=='vi-hv'||m=='listen'){const k=m=='vi-hv'?'hanzi':'vi',o=pick([w,...pick(S.words.filter(x=>x[k]!=w[k]),3)],4);
+  h+=m=='hv-vi'?`<div class=big>${esc(w.hanzi)}</div>`:m=='vi-hv'?`<div class=q>${esc(w.vi)}</div>`:`<div class=q>🔊</div>`;
+  b=`<div class=opts>${o.map(x=>`<button onclick="ans(${x.id})">${esc(x[k])}</button>`).join('')}</div>`}
+ else if(m=='hv-pyc'||m=='pyc-hv'){const o=Q.items[Q.i].o=m=='hv-pyc'?pyOpts(w):hzOpts(w);
+  h+=m=='hv-pyc'?`<div class=big>${esc(w.hanzi)}</div>`:`<div class=q style="font-size:40px">${esc(w.pinyin)}</div>`;
+  b=`<div class=opts>${o.map((x,i)=>`<button onclick="ansO(${i})" style="${m=='pyc-hv'?'font-size:30px;font-family:\'Noto Sans SC\',sans-serif':''}">${esc(x.t)}</button>`).join('')}</div>`}
+ else{h+=m=='py'?`<div class=big>${esc(w.hanzi)}</div>`:`<div class=q>${esc(w.pinyin)}<br><span class=mu>${esc(w.vi)}</span></div>`;
+  b=`<div class=row><input id=inp autocomplete=off autofocus placeholder="${m=='py'?'vd: xuéxí hoặc xue2xi2':'gõ chữ Hán'}" style="flex:1"><button class=p onclick="sub()">Kiểm tra</button></div>`}
+ $('#m').innerHTML=`<div class=card>${h}<div class=row><button onclick="say(${w.id})">🔊 Nghe</button></div>${b}<div id=fb></div></div>`;if(m=='listen'||m=='py'&&0)say(w.id);const i=$('#inp');if(i)i.focus()}
+function fin(ok,type,extra){const{w,m}=Q.items[Q.i];rec(w,ok,type,m);if(ok)Q.ok++;else Q.errs.push(w.id);Q.wait=1;
+ document.querySelectorAll('.opts button').forEach(b=>b.disabled=true);
+ $('#fb').innerHTML=`<p class="${ok?'ok':'bad'}"><b>${ok?'✓ Đúng':'✗ Sai'}</b> ${extra||''}</p><p>${esc(w.hanzi)} · <b>${esc(w.pinyin)}</b> · ${esc(w.vi)}</p><button class=p onclick="Q.i++;showQ()">Tiếp (Enter)</button>`;say(w.id)}
+function ans(id){if(Q.wait)return;const{w,m}=Q.items[Q.i];fin(id==w.id,m=='hv-vi'?'meaning':m=='vi-hv'?'hanzi':'listen')}
+function ansO(i){if(Q.wait)return;const it=Q.items[Q.i];fin(!!it.o[i].ok,it.m=='hv-pyc'?'pinyin':'hanzi')}
+function sub(){if(Q.wait)return;const{w,m}=Q.items[Q.i],v=$('#inp').value.trim();
+ if(m=='py'){const r=chk(w.pinyin,v);fin(r.ok,r.type,`<br>Bạn nhập: ${r.hl}<br>${esc(r.msg)}`)}else fin(v.replace(/[()]/g,'')==w.hanzi.replace(/[()]/g,''),'hanzi',v?`Bạn viết: ${esc(v)}`:'')}
+document.addEventListener('keydown',e=>{if(F&&!/^(INPUT|SELECT|BUTTON)$/.test(e.target.tagName)){if(e.key==' '||e.key=='Enter'){e.preventDefault();flip();return}if(/^[1-4]$/.test(e.key)&&F.f&&F.i<F.q.length){gr(+e.key-1);return}}if(e.key!='Enter'||!Q)return;if(Q.wait){Q.i++;showQ()}else if($('#inp'))sub()});
+function endQ(){S.hist.push({d:today(),mode:MN[Q.mode],s:Q.ok,n:Q.items.length});S.hist=S.hist.slice(-50);save();
+ $('#m').innerHTML=`<div class=card><h2>Kết quả: ${Q.ok}/${Q.items.length} (${Math.round(Q.ok*100/Q.items.length)}%)</h2>${Q.errs.length?`<p>Từ sai:</p>${[...new Set(Q.errs)].map(id=>`<div>${esc(W(id).hanzi)} · ${esc(W(id).pinyin)} · ${esc(W(id).vi)}</div>`).join('')}`:'<p>Hoàn hảo! 🎉</p>'}<div class=row><button class=p onclick="go('home')">Trang chủ</button><button onclick="startQ(Q.mode,Q.items.map(i=>i.w),Q.items.length)">Làm lại</button></div></div>`}
+/* ---------- Mistakes ---------- */
+const EN={hanzi:'Sai Hanzi',pinyin:'Sai Pinyin',tone:'Sai thanh điệu',meaning:'Nhớ sai nghĩa',listen:'Nghe không nhận ra'};
+function mist(){const ms=S.words.filter(w=>w.wrong-w.right*.5>0).sort((a,b)=>(b.wrong-b.right*.5)-(a.wrong-a.right*.5)),tot={};
+ ms.forEach(w=>Object.entries(w.err).forEach(([k,v])=>tot[k]=(tot[k]||0)+v));
+ $('#m').innerHTML=`<h2>Ôn lỗi sai</h2><div class=card>${Object.keys(EN).map(k=>`<span class=tag>${EN[k]}: ${tot[k]||0}</span> `).join('')}<p class=mu>Từ trả lời đúng nhiều lần sẽ tụt xuống cuối danh sách; từ hay sai được ưu tiên.</p>
+ <button class=p onclick="startQ('mix',S.words.filter(w=>w.wrong-w.right*.5>0).sort((a,b)=>(b.wrong-b.right*.5)-(a.wrong-a.right*.5)).slice(0,20),20)" ${ms.length?'':'disabled'}>Làm bài từ các từ sai</button></div>
+ <div class=card>${ms.map(w=>`<div>${esc(w.hanzi)} · ${esc(w.pinyin)} · ${esc(w.vi)} <span class=mu>(sai ${w.wrong}, đúng ${w.right}${Object.keys(w.err).length?' · '+Object.keys(w.err).map(k=>EN[k]).join(', '):''})</span></div>`).join('')||'<span class=mu>Chưa có lỗi nào.</span>'}</div>`}
+/* ---------- My vocabulary ---------- */
+function vocab(){let a=S.words.map((w,i)=>({...w,n:i+1})).filter(w=>(!V0.st||stt(w)==V0.st)&&(!V0.ls||String(w.lesson)==V0.ls)&&(!V0.q||(w.hanzi+w.pinyin+w.vi).toLowerCase().includes(V0.q.toLowerCase())||syl(w.pinyin).list.map(s=>s.b).join('').includes(syl(V0.q).list.map(s=>s.b).join('')||'\0')));
+ if(V0.sort)a.sort((x,y)=>syl(x.pinyin).list.map(s=>s.b).join('').localeCompare(syl(y.pinyin).list.map(s=>s.b).join('')));
+ $('#m').innerHTML=`<h2>Từ vựng của tôi <span class=mu>(${a.length}/${S.words.length})</span></h2><div class=row><input id=q placeholder="Tìm Hanzi / Pinyin / Việt" value="${esc(V0.q)}" oninput="V0.q=this.value;clearTimeout(window.tq);window.tq=setTimeout(()=>{vocab();$('#q').focus()},250)">
+ <select onchange="V0.st=this.value;vocab()"><option value="">Mọi trạng thái</option>${Object.entries(STN).map(([k,v])=>`<option value=${k} ${V0.st==k?'selected':''}>${v}</option>`).join('')}</select>
+ <select onchange="V0.ls=this.value;vocab()">${lsOpt().replace(`value="${V0.ls}"`,`value="${V0.ls}" selected`)}</select><label><input type=checkbox ${V0.sort?'checked':''} onchange="V0.sort=this.checked;vocab()"> A→Z Pinyin</label></div>
+ <div class=row><button onclick="addW()">＋ Thêm từ</button><button onclick="$('#fi').click()">📥 Nhập .docx</button><input id=fi type=file accept=.docx multiple hidden onchange="imp(this.files)"><button onclick="csv()">📤 Xuất CSV (mở bằng Excel)</button></div>
+ <div class=card style="overflow-x:auto"><table><tr><th>STT<th>Hanzi<th>Pinyin<th>Nghĩa<th>Bài<th>Trạng thái<th></tr>${a.map(w=>`<tr><td>${w.n}<td style="font-size:20px">${esc(w.hanzi)}<td>${esc(w.pinyin)}<td>${esc(w.vi)}${w.orig?' <span class=tag>đã sửa</span>':''}${w.src=='manual'?' <span class=tag>thêm tay</span>':''}<td>${LB(w.lesson)}<td>${STN[stt(w)]}
+ <td style="white-space:nowrap"><span style="cursor:pointer" onclick="W(${w.id}).fav=!W(${w.id}).fav;save();vocab()">${w.fav?'★':'☆'}</span> <span style="cursor:pointer" onclick="edW(${w.id})">✎</span> <span style="cursor:pointer" onclick="delW(${w.id})">🗑</span></tr>`).join('')}</table></div>`}
+function edW(id){const w=W(id),h=prompt('Hanzi',w.hanzi);if(h===null)return;const p=prompt('Pinyin',w.pinyin);if(p===null)return;const v=prompt('Nghĩa tiếng Việt',w.vi);if(v===null)return;
+ if(!w.orig)w.orig={hanzi:w.hanzi,pinyin:w.pinyin,vi:w.vi};Object.assign(w,{hanzi:h,pinyin:p,vi:v});save();vocab()}
+function delW(id){if(confirm('Xóa từ này?')){S.words=S.words.filter(w=>w.id!=id);save();vocab()}}
+const nid=()=>Math.max(0,...S.words.map(w=>w.id))+1,mk=(h,p,v,l,src)=>({id:nid(),lesson:l,hanzi:h,pinyin:p,vi:v,src,box:0,due:0,seen:0,right:0,wrong:0,fav:0,hard:0,err:{}});
+function addW(){const h=prompt('Hanzi');if(!h)return;const p=prompt('Pinyin')||'',v=prompt('Nghĩa tiếng Việt')||'';S.words.push(mk(h,p,v,'Thêm tay','manual'));save();vocab()}
+function csv(){const r=[['STT','Hanzi','Pinyin','Nghĩa','Bài','Trạng thái'],...S.words.map((w,i)=>[i+1,w.hanzi,w.pinyin,w.vi,LB(w.lesson),STN[stt(w)]])];
+ const b=new Blob(['\ufeff'+r.map(x=>x.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n')],{type:'text/csv'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='tu-vung.csv';a.click()}
+async function imp(files){if(!window.mammoth)await new Promise((ok,no)=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js';s.onload=ok;s.onerror=()=>no();document.head.append(s)}).catch(()=>alert('Cần internet để nạp bộ đọc .docx.'));
+ if(!window.mammoth)return;let add=0,dup=0;const seen=new Set(S.words.map(w=>w.hanzi+'|'+w.pinyin));
+ for(const f of files){const r=await mammoth.convertToHtml({arrayBuffer:await f.arrayBuffer()}),d=new DOMParser().parseFromString(r.value,'text/html');
+  d.querySelectorAll('table').forEach((t,ti)=>{let p=t.previousElementSibling,l=null;while(p&&!l){const m=p.textContent.match(/B[ÀA]I\s*(\d+)/i);if(m)l=+m[1];p=p.previousElementSibling}
+   t.querySelectorAll('tr').forEach(tr=>{const c=[...tr.cells].map(x=>x.textContent.trim());if(c.length>=4&&/^\d+$/.test(c[0])&&c[1]){const k=c[1]+'|'+c[2];if(seen.has(k))dup++;else{seen.add(k);S.words.push(mk(c[1],c[2],c[3],l||f.name+' #'+(ti+1),f.name));add++}}})})}
+ save();alert(`Đã thêm ${add} từ mới, bỏ qua ${dup} từ trùng.`);vocab()}
+go('home');
+</script></body></html>
